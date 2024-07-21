@@ -123,8 +123,9 @@
         -webkit-mask: var(--mask);
                 mask: var(--mask);
                 width: 100%;
-                height: 25rem;
+                height: auto;
                 background-color: #FBF1F1;
+                margin-top: 10rem;
         }
         .rhombus-1 {
             width: 200px;
@@ -144,6 +145,74 @@
             background-color: #40C0E7;
             clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
         }
+        .home-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #ffff;
+        }
+
+        .content {
+            max-width: 900px;
+            text-align: left;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .main-image {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+        }
+
+        .sub-image {
+            position: absolute;
+            bottom: -100px;
+            left: -30px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+        }
+
+        .orange-shape {
+            position: absolute;
+            top: 230px;
+            left: 290px;
+            width: 150px;
+            height: auto;
+        }
+
+        .icon {
+            font-size: 2rem;
+            color: orange;
+        }
+        .custom-icon {
+            color: #3f3f3f; /* Warna merah */
+        }
+        @media (max-height: 600px) {
+        .card-event {
+            width: 200px;
+            
+            
+
+        }
+       }
+       @media (max-height: 400px) {
+        .card-event {
+            width: 100px;
+            
+            
+
+        }
+       }
 
        
     </style>
@@ -231,11 +300,43 @@
 
         <div class="homepage" >
             
+                <div class="container home-section">
+                    <div class="row content">
+                        
+                            <div class="col-md-6 col-12 d-none d-none d-md-block">
+                                <div class="image-container">
+                                    <img src="img/gurumurid.jpg" alt="Main" class="main-image img-fluid">
+                                    <img src="img/anak1.jpg" alt="Sub" class="sub-image img-fluid">
+                                    <img src="img/Vector6.png" alt="Orange Shape" class="orange-shape">
+                                </div>
+                            </div>
+                       
+                        
+                        <div class="col-md-6 col-12">
+                            <h2>About Us</h2>
+                            <h3>Welcome to Best JoyfullKids for Your Child</h3>
+                            <p>Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum,</p>
+                            <div class="award-section">
+                                <i class="fas fa-trophy icon"></i>
+                                <h4>Award Winning Time</h4>
+                                <p>Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum,</p>
+                            </div>
+                             <hr>
+                            <div class="award-section">
+                                <i class="fas fa-arrow-up icon"></i>
+                                <h4>Leading Education</h4>
+                                <p>Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum,</p>
+                            </div>
+                            <button class="btn btn-warning mt-3">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            
 
         </div>
          <div class="programpage " >
             <img class="img-fluid" src="img/Vector 2.png" alt="" style="width: 100%;">
-            <div class="container d-flex justify-content-center ">
+            <div class="container d-flex justify-content-center">
                 <div class="row d-flex justify-content-between  ">
                     <div class="col-md-4 col-12 p-4 d-flex justify-content-center">
                         <div class="card" style="width: 18rem; border-radius:5%; background-color: #F3F3F3;">
@@ -313,8 +414,8 @@
         <div class="eventpage">
             <div class="box d-flex justify-content-center align-items-center col-12">
                 <div class="container d-flex justify-content-center pt-5">
-                    <div class="row d-flex justify-content-center  " style="width: 100%;">
-                        <div class="col-4 d-flex justify-content-center">
+                    <div class="row d-flex justify-content-center  " style="width: 100%; height: auto;">
+                        <div class="col-md-4 col-12 d-flex justify-content-center">
                             <ul style="list-style-type: none;">
                                 <li>
                                     <div class="rhombus-1 d-flex justify-content-center align-items-center">
@@ -334,7 +435,7 @@
             
 
                         </div>
-                        <div class="col-4 d-flex justify-content-center ">
+                        <div class="col-md-4 col-12 d-flex justify-content-center ">
                             <ul style="list-style-type: none;">
                                 <li>
                                     <div class="rhombus-2 d-flex justify-content-center align-items-center">
@@ -347,7 +448,7 @@
                             </li>
                             </ul>
                         </div>
-                        <div class="col-4 d-flex justify-content-center">
+                        <div class="col-md-4 col-12 d-flex justify-content-center">
                             <ul style="list-style-type: none;">
                                 <li>
                                     <div class="rhombus-3 d-flex justify-content-center align-items-center">
@@ -368,28 +469,59 @@
             </div>
             
         </div>
-        <div class="container">
+        <div class="container py-3">
             <div class="row">
                 <div class="col-12">
                     <h3 class="text-center">Upcoming School Activities <br> & Events Schedule</h3>
                 </div>
-                <div class="container">
-                    <div class="col-6">
+                <div class="container py-3">
+                    <div class="row">
+                        <div class="col-md-6 col-12 pb-5">
                     
-                    <div class="card" style="width: 500px; height: auto; border-radius: 20px;">
-                        <div class="row">
-                            <div class="col-6">
-                                <img class="img-fluid card-image-top" src="img/Rectangle 35.png" alt="">
+                            <div class="card card-event" style=" height: auto; border-radius: 30px;">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img class="img-fluid card-image-top" src="img/Rectangle 35.png" alt="" style="border-radius: 30px 0px 0px 30px;">
+                                    </div>
+                                    <div class="col-6 position-relative">
+                                        <h5 class="text-center pt-2">English Day on <br>
+                                             Carfree Day</h5>
+                                             <div class="text-center position-absolute bottom-0 ms-5  mb-3">
+                                                <a href="#" class="px-4 py-1" style="background-color: #FFF89A;color: black; border-radius: 20px; text-decoration: none;">See More</a>
+                                            </div>
+        
+                                     </div>
+                                 </div>
+                                 
+                                </div>
+                                
                             </div>
-                            <div class="col-6">
-                                <h5>English Day on Carfree Day</h5>
-                             </div>
-                         </div>
-                         
-                        </div>
-                        
+                            <div class="col-md-6 col-12 pb-5">
+                            
+                                <div class="card card-event" style=" height: auto; border-radius: 30px;">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <img class="img-fluid card-image-top" src="img/Rectangle 35.png" alt="" style="border-radius: 30px 0px 0px 30px;">
+                                        </div>
+                                        <div class="col-6 position-relative">
+                                            <h5 class="text-center pt-2">English Day on <br>
+                                                 Carfree Day</h5>
+                                                 <div class="text-center position-absolute bottom-0 ms-5  mb-3">
+                                                    <a href="#" class="px-4 py-1" style="background-color: #FFF89A;color: black; border-radius: 20px; text-decoration: none;">See More</a>
+                                                </div>
+            
+                                         </div>
+                                     </div>
+                                     
+                                    </div>
+                                    
+                                </div>
+
                     </div>
+                    
                 </div>
+                
+        
                  
                     
             </div>
